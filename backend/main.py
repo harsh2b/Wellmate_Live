@@ -1,5 +1,4 @@
-# Updated: Removed Google login functionality, focusing on guest users.
-# Why: User requested to remove Google login and keep only guest feature.
+
 from langchain_community.chat_message_histories import ChatMessageHistory
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
@@ -7,7 +6,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import os
-from chatbot import generate_response
+from .chatbot import generate_response
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 from starlette.middleware.sessions import SessionMiddleware
